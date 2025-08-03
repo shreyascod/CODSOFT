@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Result</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <div id="result"></div>
+  </div>
+
+  <!-- 🎉 CELEBRATION POPUP -->
+  <div id="celebrationPopup" class="popup hidden">
+    <div class="popup-content">
+      <h2>🎉 Congratulations! 🎉</h2>
+      <p>You scored above 50%!</p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <!-- 🔁 Restart Button -->
+  <div class="btn-container">
+    <button onclick="restartQuiz()">🔁 Restart</button>
+  </div>
+
+  <!-- 🌓 Theme Toggle -->
+  <div class="theme-toggle" onclick="toggleTheme()">🌓 Theme</div>
+
+  <!-- 🎵 Celebration Sound -->
+  <audio id="celebrationSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c92bcf2133.mp3?filename=small-crowd-cheer-6346.mp3"></audio>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="js/result.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Quiz</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="theme-toggle" onclick="toggleTheme()">🌓 Theme</div>
+    <div class="container">
+        <img src="assets/image.png" alt="Quiz" class="header-img"/>
+        <div class="timer" id="timer">Time: 15s</div>
+        <h2 id="questionCount"></h2>
+        <h1 id="quizTitle"></h1>
+        <div class="progress-bar"><div id="progress"></div></div>
+        <div id="quizContainer"></div>
+        <button id="nextBtn">Next</button>
+        <button id="submitBtn">Submit</button>
+    </div>
+    <script>
+        if(!localStorage.getItem("quizData")){
+            const sampleQuiz = {
+               "title": "General Knowledge",
+        "questions": [
+            {
+                "text": "Which planet is known as the Red Planet?",
+                "options": ["Mercury", "Venus", "Mars", "Jupiter"],
+                "correctIndex": 2
+            },
+            {
+                "text": "What is the capital of France?",
+                "options": ["Berlin", "Paris", "Rome", "Madrid"],
+                "correctIndex": 1
+            },
+            {
+                "text": "Who wrote 'Hamlet'?",
+                "options": ["William Shakespeare", "Charles Dickens", "Mark Twain", "Jane Austen"],
+                "correctIndex": 0
+            }
+        ] 
+    };
+    localStorage.setItem("quizData",JSON.stringify(sampleQuiz));  
+}
+    </script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>
